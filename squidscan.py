@@ -4,7 +4,7 @@ print "SquidScan by Claor"
 print "=================="
 
 if len(sys.argv) < 3:
-	print "Uso: " + sys.argv[0] + " ip puerto [archivo-puertos]"
+	print "Uso: " + sys.argv[0] + " <ip> <puerto> [archivo-puertos]"
 	sys.exit()
 
 proxy = { "http": "http://"+ sys.argv[1] +":" + sys.argv[2], }
