@@ -6,14 +6,14 @@ print "=================="
 if len(sys.argv) < 3:
 	print "Uso: ./" + sys.argv[0] + " <ip> <puerto> [archivo-puertos]"
 	sys.exit()
+elif len(sys.argv) == 4:
+	p = open(sys.argv[3], 'r')
+else:
+	p = {"21","22","80","139","443","1433","3306","3389","8080"}
 
 proxy = { "http": "http://"+ sys.argv[1] +":" + sys.argv[2], }
 inicio = time.time()
 
-if len(sys.argv) == 4:
-	p = open(sys.argv[3], 'r')
-else:
-	p = {"21","22","80","139","443","1433","3306","3389","8080"}
 
 for n in p:
 	n = n.strip()
